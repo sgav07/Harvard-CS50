@@ -1,0 +1,82 @@
+header {
+    background-color: #303036;
+    color: white;
+    text-shadow: 0.5px 1px #ffe6e6;
+    padding: 25px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; ;
+}
+
+body {
+    background-color: #ffe6e6;
+}
+
+h1 {
+    text-align: left;
+    margin-left: 30px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; ;
+}
+
+h3 {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; ;
+}
+
+h6 {
+    text-align: left;
+    margin-left: 30px;
+    font-size: 80%;
+}
+
+.normal {
+  list-style-type: circle;
+}
+
+.content {
+    min-height: calc(100vh - 150px);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff9999;
+}
+
+
+/* Set up how the link in the main menu looks like */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+/* Change the link color to #d59090 (peach/grey) on hover */
+li a:hover {
+  background-color: #d59090;
+  text-shadow: 1px 1px black;
+  color: white;
+  border: 1px grey;
+}
+
+.jumbotron {
+  background-color: #ffb3b3;
+}
+
+footer {
+  background-color: #303036;
+  color: white;
+  padding: 10px;
+  margin-top: 50px;
+  text-align:left;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
