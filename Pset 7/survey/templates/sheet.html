@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h1>Sheet</h1>
+
+        <!-- Source code: https://stackoverflow.com/questions/9198334/how-to-build-up-a-html-table-with-a-simple-for-loop-in-jinja2 -->
+        <table class="table table-hover">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Brand</th>
+                    <th>Status</th>
+                </tr>
+            {% for customer in customers %}
+                <TR>
+                    <TD class="c1">{{customer[0]}}</TD>
+                    <TD class="c1">{{customer[1]}}</TD>
+                    <TD class="c2">{{customer[2]}}</TD>
+                    <TD class="c3"><SPAN>{{customer[3]}}</SPAN></TD>
+                </TR>
+            {% endfor %}
+        </table>
+
+{% endblock %}

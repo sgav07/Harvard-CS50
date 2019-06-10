@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+    <br>
+    <h5 class="mb-3">Contact details</h5>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input autocomplete="off" id="name" autofocus name="name" placeholder="Your name" type="text">
+        </div>
+
+        <div class="form-group">
+        <label for="email">Email </label>
+        <input autocomplete="off" id="email" autofocus name="email" placeholder="example@example.com" type="text">
+        </div>
+    <br>
+    <h5 class="mb-3">Vehicle preferences</h5>
+
+        <div class="form-group">
+        <label for="brand">Select brand from the menu: </label>
+            <select name="brand">
+                <option disabled selected value="">Brand</option>
+                <option value="Opel">Opel</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Peugeot">Peugeot</option>
+                <option value="VW">VW</option>
+                <option value="Renault">Renault</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="BMW">BMW</option>
+            <</select>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input name="vehicle" type="radio" value="new"> New </input>
+            </div>
+            <div class="form-check">
+                <input name="vehicle" type="radio" value="used"> Used </input>
+            </div>
+        </div>
+
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        var radios = document.getElementsByName('vehicle');
+        var checked = false;
+
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('input').value) {
+                alert('Please provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('input[name="email"]').value) {
+                alert('Please provide your email!');
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert('Please provide preferred brand!');
+                return false;
+            }
+            else if (document.querySelector('input').value) {
+                var radios = document.getElementsByName('vehicle');
+                var checked = false;
+                for (var j = 0, length = radios.length; j < length; j++) {
+                    if (radios[j].checked)
+                        {
+                            checked = true;
+                            return true;
+                        }
+                    }
+                    if(!checked)
+                    {
+                        alert('Please select your preference for new or used vehicle!');
+                        return false;
+                    }
+                }
+            return true;
+            };
+
+
+    </script>
+
+{% endblock %}
